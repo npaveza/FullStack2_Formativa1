@@ -5,16 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos Chilenos</title>
     <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/scripts.js"></script>
+    <!-- <script>
+        const sessionInfoDiv = document.getElementById('sessionInfo');
+        const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
+    
+        if (usuarioActivo) {
+            sessionInfoDiv.innerHTML = `
+                <span>Usuario: ${usuarioActivo.nombre}</span>
+                <button class="btn btn-light ms-3" onclick="cerrarSesion()">Cerrar Sesión</button>
+            `;
+        } else {
+            sessionInfoDiv.innerHTML = `
+                <a href="login.html" class="btn btn-light">Iniciar Sesión</a>
+            `;
+        }
+    </script>
+-->
 </head>
 <body>
     <header>
         <h1>Juegos Chilenos</h1>
+        <div id="sessionInfo">
+            <!-- Aquí se mostrará el nombre de usuario y el botón de cerrar sesión -->
+        </div>
         <nav>
             <a href="index.html">Inicio</a>
-            <a href="categoria1.html">Estrategia</a>
-            <a href="categoria2.html">Familiares</a>
-            <a href="categoria3.html">Cartas</a>
-            <a href="categoria4.html">Chilenos</a>
+            <a href="estrategia.html">Estrategia</a>
+            <a href="familiares.html">Familiares</a>
+            <a href="cartas.html">Cartas</a>
+            <a href="chilenos.html">Chilenos</a>
         </nav>
     </header>
     <main>
