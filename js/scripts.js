@@ -113,7 +113,7 @@ function verificarSesion() {
 
     // Si no hay usuario activo, redirigir al login
     if (!usuarioActivo) {
-        //window.location.href = 'login.html';
+        window.location.href = 'login.html';
     }
 }
 
