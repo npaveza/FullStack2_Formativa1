@@ -5,22 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juegos de Cartas</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script src="js/scripts.js"></script>
-    <script>
-        const sessionInfoDiv = document.getElementById('sessionInfo');
-        const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
-    
-        if (usuarioActivo) {
-            sessionInfoDiv.innerHTML = `
-                <span>Usuario: ${usuarioActivo.nombre}</span>
-                <button class="btn btn-light ms-3" onclick="cerrarSesion()">Cerrar Sesión</button>
-            `;
-        } else {
-            sessionInfoDiv.innerHTML = `
-                <a href="login.html" class="btn btn-light">Iniciar Sesión</a>
-            `;
-        }
-    </script>
+    <script src="js/scripts.js" defer></script>
 </head>
 <body>
     <header>
@@ -62,5 +47,20 @@
     <footer>
         <p>© 2024 Melkgamez - Ningún derecho reservado.</p>
     </footer>
+    <script>
+        const sessionInfoDiv = document.getElementById('sessionInfo');
+        const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
+    
+        if (usuarioActivo) {
+            sessionInfoDiv.innerHTML = `
+                <span>Usuario: ${usuarioActivo.nombre}</span>
+                <button class="btn btn-light ms-3" onclick="cerrarSesion()">Cerrar Sesión</button>
+            `;
+        } else {
+            sessionInfoDiv.innerHTML = `
+                <a href="login.html" class="btn btn-light">Iniciar Sesión</a>
+            `;
+        }
+    </script>
 </body>
 </html>

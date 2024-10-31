@@ -9,10 +9,11 @@ document.getElementById('registroForm')?.addEventListener('submit', function(eve
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirmPassword').value;
     const fechaNacimiento = new Date(document.getElementById('fechaNacimiento').value);
+    const direccion = document.getElementById('direccion').value.trim();
 
     // Validaciones
     if (!nombre || !usuario || !email || !password || !confirmPassword || !fechaNacimiento) {
-        alert('Todos los campos son obligatorios, excepto la dirección de despacho.');
+        displayMessage('Todos los campos son obligatorios, excepto la dirección de despacho.', 'registerMessage');
         return;
     }
 
@@ -101,12 +102,12 @@ function cerrarSesion() {
 }
 
 // Verificar si hay una sesión activa en todas las páginas excepto login y registro
-/*function verificarSesion() {
+function verificarSesion() {
     const usuarioActivo = JSON.parse(localStorage.getItem('usuarioActivo'));
     const pathname = window.location.pathname;
 
     // Evitar verificación en login.html, registro.html e index.html
-    if (pathname.includes('login.html') || pathname.includes('registro.html'|| pathname.includes('index.html')) {
+    if (pathname.includes('login.html') || pathname.includes('registro.html')|| pathname.includes('index.html')) {
         return;
     }
 
@@ -114,7 +115,7 @@ function cerrarSesion() {
     if (!usuarioActivo) {
         //window.location.href = 'login.html';
     }
-}*/
+}
 
 // Ejecutar la verificación de sesión cuando el DOM esté cargado
 document.addEventListener('DOMContentLoaded', function() {
